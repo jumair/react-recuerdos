@@ -150,12 +150,8 @@ export default class RecuerdoForm extends Component {
             const formData = new FormData();
             formData.append("file", this.state.dropzone_image);
             formData.append("tags", `codeinfuse, medium, gist`);
-            
             formData.append("upload_preset", datosapis.cloudinary.uploadPreset);
             formData.append("api_key", datosapis.cloudinary.apiKey);
-
-            //formData.append("upload_preset", "recuerdos");
-            //formData.append("api_key", "183985575138611");
             formData.append("timestamp", (Date.now() / 1000) | 0);
             
             axios
@@ -278,20 +274,7 @@ export default class RecuerdoForm extends Component {
             return `public_id=${publicId}&timestamp=${timestamp}${apiSecret}`;
         };
 
-        /*const apiSecret = "oRJsBfr9OuYPKvXWeffqy99-SsU";  
-        const publicId = "recuerdos/daba1o03fak6cmfypog1";
-        const timestamp = new Date().getTime();
-        const signature = generateSHA1(generateSignature(publicId, apiSecret));
-
-        alert("SIGNATURE => " + signature);
-        alert("SIGNATURE => " + timestamp);*/
-        //alert("SIGNATURE => ENTRA");
-
         const handleDelete = ({ publicId }) => {
-            //const cloudName = "dwuug0hqs";
-            //const apiKey = "183985575138611";
-            //const apiSecret = "oRJsBfr9OuYPKvXWeffqy99-SsU";
-
             const cloudName = datosapis.cloudinary.cloudName;
             const apiKey = datosapis.cloudinary.apiKey;
             const apiSecret = datosapis.cloudinary.apiSecret;
@@ -299,10 +282,6 @@ export default class RecuerdoForm extends Component {
             const timestamp = new Date().getTime();
             const signature = generateSHA1(generateSignature(publicId, apiSecret));
             const url = `https://api.cloudinary.com/v1_1/${cloudName}/image/destroy`;
-
-            /*alert("handleDelete => publicId " + publicId);
-            alert("handleDelete => signature " + signature);
-            alert("handleDelete => timestamp " + timestamp);*/
             
             axios
                 .post(url, {
@@ -319,7 +298,6 @@ export default class RecuerdoForm extends Component {
                 });
         };
 
-        //const publicId = "recuerdos/prueba1";
         const publicId = generatePublicId(imageUrlABorrar);
         handleDelete({publicId});
     }

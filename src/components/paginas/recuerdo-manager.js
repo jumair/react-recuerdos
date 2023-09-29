@@ -58,10 +58,6 @@ export default class RecuerdoManager extends Component {
         };
 
         const handleDelete = ({ publicId }) => {
-            /*const cloudName = "dwuug0hqs";
-            const apiKey = "183985575138611";
-            const apiSecret = "oRJsBfr9OuYPKvXWeffqy99-SsU";*/
-
             const cloudName = datosapis.cloudinary.cloudName;
             const apiKey = datosapis.cloudinary.apiKey;
             const apiSecret = datosapis.cloudinary.apiSecret;
