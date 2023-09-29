@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bottega-code-school/js-builder.git"
+    "url": "git@github.com:jumair/react-recuerdos.git"
   },
   "keywords": [
     "es6",
@@ -28,9 +28,9 @@
   "author": "Juan Manuel Iriondo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bottega-code-school/js-builder/issues"
+    "url": "https://github.com/jumair/react-recuerdos/issues"
   },
-  "homepage": "https://github.com/bottega-code-school/js-builder",
+  "homepage": "https://github.com/jumair/react-recuerdos",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
