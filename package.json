@@ -25,12 +25,12 @@
     "sass",
     "css module"
   ],
-  "author": "Juan Manuel Iriondo",
+  "author": "Juan Manuel Iriondo Ortega",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jumair/react-recuerdos/issues"
   },
-  "homepage": "https://github.com/jumair/react-recuerdos",
+  "homepage": "jumair.github.io/curriculum",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
