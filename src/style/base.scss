@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+
+    h1, h2 {
+        text-align: center;
+    }
+}

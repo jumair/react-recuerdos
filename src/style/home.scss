@@ -1,0 +1,52 @@
+.home-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    //height: 693px;
+
+    //naranja-camara
+    background: linear-gradient(to bottom, rgba(255, 145, 77, 1), rgba(255, 145, 77, 0));
+    //verde-camara
+    //background: linear-gradient(to right, rgba(126, 217, 87, 1), rgba(126, 217, 87, 0));
+    //azul-camara
+    //background: linear-gradient(to right, rgba(56, 182, 255, 1), rgba(56, 182, 255, 0));
+
+    //Gris
+    //background: linear-gradient(to bottom, rgba(192, 194, 196, 1), rgba(192, 194, 196, 0));
+
+    .home-left {
+        //margin-left: 20px;
+        padding-left: 20px;
+
+        .home-left-foto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .foto-verde {
+                width: 40%;
+                height: 40%;
+                transform: rotate(25deg);
+            }
+
+            .foto-negra {
+                width: 30%;
+                height: 30%;
+                transform: rotate(-30deg);
+            }
+        }
+    }
+
+    .home-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}

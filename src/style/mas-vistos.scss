@@ -1,0 +1,43 @@
+.masvistos-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    background: linear-gradient(to bottom, rgba(56, 182, 255, 1), rgba(56, 182, 255, 0));
+
+    .carrusel {
+        display: flex;
+        width: 800px;
+        height: 500px;
+
+        .carrusel-div2 {
+            width: 0px;
+            flex-grow: 1;
+            opacity: .8;
+            transition: 0.5s ease;
+            background-color: red;
+
+            &:hover {
+                cursor: crosshair;
+                width: 300px;
+                opacity: 1;
+                filter: contrast(120%);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .carrusel {
+        //display: inline-block;
+        width: 80vw;
+        height: 300px;
+    }
+}

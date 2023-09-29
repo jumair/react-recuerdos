@@ -1,0 +1,39 @@
+.recuerdo-barra-lista-contenedor {
+    .recuerdo-item-thumb {
+        padding: 21px;
+        text-align: center;
+
+        .recuerdo-thumb-image img {
+            width: 70%;
+            border-radius: 10px;
+        }
+
+        .texto-contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .titulo {
+                color: $offwhite;
+                font-size: 1.5em;
+            }
+
+            .actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+
+                .action-icon {
+                    cursor: pointer;
+                    color: $offwhite;
+                    font-size: 1.5em;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        color: $naranja-camara;
+                    }
+                }
+            }
+        }
+    }
+}

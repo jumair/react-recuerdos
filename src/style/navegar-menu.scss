@@ -1,0 +1,64 @@
+.navegar-contenedor {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: $azul-camara;
+    
+    //height: 30px;
+    //width: 100vw; NO
+
+    .left-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: end;
+        padding: 15px;
+    }
+
+    .menu {
+        display: flex;
+        border-bottom: 1px solid transparent;
+        transition: 0.5s ease-in-out;
+        margin-right: 20px;
+        font-size: 0.9rem;
+
+        a {
+            font-weight: 700;
+            color: $blanco;
+            text-decoration: none;
+            &:hover {
+                color: $naranja-camara;
+            }
+        }
+
+        .nav-link-active {
+            border-bottom: 1px solid $negro;
+            color: $negro;
+            &:hover {
+                color: $negro;
+            }
+        }
+    }
+
+    .menu-salir {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menu-salir-p {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $blanco;
+            //text-transform: uppercase;
+        }
+
+        .menu-salir-a {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+    }
+}

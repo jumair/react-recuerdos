@@ -1,0 +1,4 @@
+node_modules/
+dist/
+src/components/utils/apis.js
+src/components/utils/apis-copia.js
