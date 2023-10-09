@@ -15,8 +15,7 @@ export default class Recuerdos extends Component {
             totalCount: 0,
             offsetPage: 0,
             isLoading: true,
-            totalUsuarios: 0
-            //recuerdoModalIsOpen: false
+            totalUsuarios: 0,
         }
 
         this.getRecuerdoItems = this.getRecuerdoItems.bind(this);
@@ -90,13 +89,20 @@ export default class Recuerdos extends Component {
         this.getRecuerdoItems();
     }
 
+    /*componentDidUnmount() {  //  NO EXISTE ?????
+        window.removeEventListener("scroll", this.onScroll, false);
+    }*/
+
     componentWillUnmount() {
         window.removeEventListener("scroll", this.onScroll, false);
     }
 
     render() {
         const recuerdosRegistros = this.state.recuerdoItems.map(recuerdoItem => {
-            return <RecuerdoItem key={recuerdoItem.id} recuerdoItem={recuerdoItem} numUsuarios={this.state.totalUsuarios} />;
+            return <RecuerdoItem key={recuerdoItem.id} 
+                                 recuerdoItem={recuerdoItem} 
+                                 numUsuarios={this.state.totalUsuarios}
+                    />;
         });
 
         return (

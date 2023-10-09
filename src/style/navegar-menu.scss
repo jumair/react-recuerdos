@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     background-color: $azul-camara;
-    
-    //height: 30px;
-    //width: 100vw; NO
+
+    //box-shadow: 0 0 10px 8px $azul-camara;
+    box-shadow: 0 0 10px 8px black;
 
     .left-side {
         display: flex;
@@ -59,6 +59,25 @@
         .menu-salir-a {
             margin-left: 10px;
             font-size: 1.2rem;
+        }
+    }
+}
+
+// Queries
+@media screen and (max-width: 450px) {
+    .navegar-contenedor {
+        .menu {
+            font-size: 0.6rem;
+        }
+
+        .menu-salir {
+            .menu-salir-p {
+                font-size: 0.7rem;
+            }
+
+            .menu-salir-a {
+                font-size: 0.9rem;
+            }
         }
     }
 }

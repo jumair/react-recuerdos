@@ -63,7 +63,7 @@ export default class MasVistos extends Component {
             <div className="masvistos-contenedor">
                 <div className="masvistos-contenedor-h1-carrusel">
                     <div>
-                        <h1>Los 5 recuerdos más recientes</h1>
+                        <h2>Los 5 recuerdos más recientes</h2>
                     </div>
                     <br></br>
                     <div className="carrusel">

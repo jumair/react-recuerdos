@@ -102,7 +102,7 @@ export default class NumMeGusta extends Component {
         
         return(
             <div>
-                <div style={{color: colorear}}>Le gusta a {this.state.numMegusta} de {this.props.numUsuarios} Usuarios</div>
+                <div style={{color: colorear}}>Gusta a {this.state.numMegusta} de {this.props.numUsuarios} Usuarios</div>
 
                 <div className="enlaces">
                     {this.state.legusta === 1 ? (

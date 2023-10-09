@@ -50,7 +50,7 @@ export default class NumMeGusta extends Component {
         }
 
         return(
-            <div style={{color: colorear}}>{this.state.numQuienes} Usuarios etiquetados en la foto</div>
+            <div style={{color: colorear}}>{this.state.numQuienes} Usuarios etiquetados</div>
         );
     }
 

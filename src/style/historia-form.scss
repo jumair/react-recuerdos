@@ -1,0 +1,43 @@
+.contenedor {
+
+    .form-contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .from-contenedor-historia {
+            display: flex;
+            padding: 5px;
+
+            textarea {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        .from-contenedor-button {
+            display: flex;
+        }
+            
+    }
+
+    .historias-contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .historia-contenedor {
+            display: grid;
+            grid-template-columns: 4fr 2fr 0.5fr 1fr;
+
+            .borrar {
+                cursor: pointer;
+                //color: $offwhite;
+                font-size: 1.3em;
+                transition: 0.5s ease-in-out;
+
+                &:hover {
+                    color: $naranja-camara;
+                }
+            }
+        }
+    }
+}
