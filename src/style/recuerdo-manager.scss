@@ -18,3 +18,28 @@
         //background: linear-gradient(to bottom, rgba(126, 217, 87, 1), rgba(126, 217, 87, 0));
     }
 }
+
+// Queries
+@media screen and (max-width: 1200px) {
+    .recuerdo-manager-wrapper {
+        grid-template-columns: 2fr 1fr;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .recuerdo-manager-wrapper {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recuerdo-manager-wrapper {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.5rem;
+        //width: 80%;
+    }
+}

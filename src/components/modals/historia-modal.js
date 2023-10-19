@@ -48,15 +48,12 @@ export default class HistoriaModal extends Component {
                 }}      
                 isOpen={this.props.modalIsOpen}
             >
-                <h2>{storage.get('Nombre')} va a agregar una historia al recuerdo {this.props.recuerdoItem.titulo}</h2>
-                {/*<div>
-                    <p>{storage.get('Nombre')}</p>
-                    <p>{storage.get('Id')}</p>
-                </div>*/}
-                {/*<div>
-                    {this.props.recuerdoItem.titulo}
-                    {this.props.recuerdoItem.id}
-                </div>*/}
+                <div className="encabezado">
+                    <div className="encabezado-cerrar"><h2 onClick={() => this.props.handleModalClose()}>X</h2></div>
+                    <div className="encabezado-texto">
+                        <h3>{storage.get('Nombre')} va a agregar una historia al recuerdo {this.props.recuerdoItem.titulo}</h3>
+                    </div>
+                </div>
 
                 <HistoriaForm 
                     handleSuccessfullFormSubmission={this.handleSuccessfullFormSubmission}

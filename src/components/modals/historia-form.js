@@ -119,7 +119,10 @@ export default class HistoriaForm extends Component {
             return(
                 <div key={historia.id} className="historia-contenedor">
                     <div className="historia">{historia.historia}</div>
-                    <div className="fecha-historia">{historia.fecha_historia}</div>
+                    <div className="fecha-historia">
+                        {/*{historia.fecha_historia}*/}
+                        {new Date(historia.fecha_historia).toLocaleDateString('sp-es', {weekday:"long", year:"numeric", month:"short", day:"numeric"})}
+                    </div>
                     <div className="usuario">{historia.usuario_nombre}</div>
                     <div className="borrar">
                         {/*{historia.usuario_id === storage.get('Id') ? "Se puede Borrar" : "No se puede Borrar"}*/}
@@ -130,6 +133,7 @@ export default class HistoriaForm extends Component {
                             : ""
                         }
                     </div>
+                    <hr></hr>
                 </div>
             );
         });
@@ -138,7 +142,7 @@ export default class HistoriaForm extends Component {
             <div className="contenedor">
                 <div className="form-contenedor">
                     <form onSubmit={this.handleSubmit}>
-                        <div className="from-contenedor-historia">
+                        <div className="form-contenedor-historia">
                             <textarea 
                                 type='text'
                                 onChange={this.handleChange}
@@ -150,12 +154,13 @@ export default class HistoriaForm extends Component {
 
                         <br></br>
 
-                        <div className="from-contenedor-button">
-                            <button>Agregar Historia</button>
+                        <div className="form-contenedor-button">
+                            <button className="btn">Agregar Historia</button>
                         </div>
                     </form>
                 </div>
 
+                <br></br>
                 <br></br>
 
                 <div className="historias-contenedor">

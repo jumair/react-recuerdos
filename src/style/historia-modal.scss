@@ -1,0 +1,33 @@
+.encabezado {
+    
+    .encabezado-cerrar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0px;
+        height: 30px;
+
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        font-size: 1.3rem;
+
+        &:hover {
+            color: $naranja-camara;
+        }
+    }
+}
+
+// Queries
+@media screen and (max-width: 850px) {
+    .encabezado {
+
+        .encabezado-cerrar h2 {
+            font-size: 1.1rem;
+        }
+
+        .encabezado-texto h3 {
+            font-size: 0.9rem;
+        }
+        
+    }
+}

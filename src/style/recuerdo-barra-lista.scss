@@ -33,7 +33,33 @@
                         color: $naranja-camara;
                     }
                 }
+
+                .action-icon-trash {
+                    cursor: pointer;
+                    color: $offwhite;
+                    font-size: 1.5em;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        color: $warning;
+                    }
+                }
             }
+        }
+    }
+}
+
+// Queries
+@media screen and (max-width: 850px) {
+    .recuerdo-barra-lista-contenedor {
+
+        .recuerdo-item-thumb {
+
+            .recuerdo-thumb-image img {
+                width: 50%;
+                border-radius: 5px;
+            }
+
         }
     }
 }

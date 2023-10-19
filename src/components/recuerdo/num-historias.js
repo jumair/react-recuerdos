@@ -3,17 +3,17 @@ import axios from "axios";
 
 import datosapis from '../utils/apis';
 
-export default class NumQuienes extends Component {
+export default class NumHistorias extends Component {
     constructor(props) {
         super(props);
         
         this.state = {
-            numQuienes: 0 
+            numHistorias: 0 
         };
     }
 
-    getRecuerdoNumQuienes() {
-        const urlApi = datosapis.urlapi + "num_quienes/";
+    getRecuerdoNumHistorias() {
+        const urlApi = datosapis.urlapi + "num_historias/";
 
         axios
             .get(
@@ -23,20 +23,20 @@ export default class NumQuienes extends Component {
             )
             .then(response => {
                 this.setState({
-                    numQuienes: response.data.num_quienes
+                    numHistorias: response.data.num_historias
                 });
             })
             .catch(error => {
-                console.log("getRecuerdoNumQuienes error", error);
+                console.log("getRecuerdoNumHistorias error", error);
             });
     }
 
     componentDidMount() {
-        this.getRecuerdoNumQuienes();
+        this.getRecuerdoNumHistorias();
     }
 
     render() {
-        const cuantos = this.state.numQuienes;
+        const cuantos = this.state.numHistorias;
 
         let colorear = "#000000"; // negro
         if (cuantos <= 1) {
@@ -50,7 +50,7 @@ export default class NumQuienes extends Component {
         }
 
         return(
-            <div style={{color: colorear}}>{this.state.numQuienes} Usuarios etiquetados</div>
+            <div style={{color: colorear}}>{this.state.numHistorias} Historias</div>
         );
     }
 

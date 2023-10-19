@@ -73,3 +73,52 @@
         width: 100px;
     }
 }
+
+// Queries
+@media screen and (max-width: 850px) {
+    .recuerdo-form-contenedor {
+        width: 80vw;
+
+        textarea {
+            font-size: 0.6rem;
+            height: 60px;
+            width: 400px;
+            padding: 5px;
+        }
+
+        .usuarios-etiquetas {
+            div {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                label {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recuerdo-form-contenedor {
+
+        textarea {
+            height: 40px;
+            width: 280px;
+            padding: 2px;
+        }
+
+        .image-uploader {
+            grid-template-columns: 100px;
+        }
+
+        .usuarios-etiquetas {
+            div {
+
+                label {
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

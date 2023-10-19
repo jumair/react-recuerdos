@@ -4,20 +4,30 @@
         display: grid;
         grid-template-columns: 1fr;
 
-        .from-contenedor-historia {
+        padding: 10px;
+        border: 2px solid $naranja-camara;
+        border-radius: 5px;
+
+        .form-contenedor-historia {
             display: flex;
             padding: 5px;
 
             textarea {
                 width: 100%;
                 height: 150px;
+                border: 1px solid $teal;
+                background-color: transparent;
+                font-size: 1rem;
+                height: 100px;
+                outline: none;
+                padding: 10px;
             }
         }
 
-        .from-contenedor-button {
+        .form-contenedor-button {
             display: flex;
-        }
-            
+        }  
+              
     }
 
     .historias-contenedor {
@@ -35,9 +45,34 @@
                 transition: 0.5s ease-in-out;
 
                 &:hover {
-                    color: $naranja-camara;
+                    color: $warning;
                 }
             }
         }
+    }
+}
+
+// Queries
+@media screen and (max-width: 850px) {
+    .contenedor {
+
+        .form-contenedor {
+            .form-contenedor-historia textarea {
+                font-size: 0.8rem;
+            }
+            
+            .form-contenedor-button .btn {
+                font-size: 0.8rem;
+            }
+        }
+
+        .historias-contenedor {
+            font-size: 0.7rem;
+
+            .historia-contenedor {
+                grid-template-columns: 3fr 2fr 1fr 0.5fr;
+            }
+        }
+        
     }
 }

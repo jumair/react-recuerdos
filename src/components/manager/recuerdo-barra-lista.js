@@ -16,7 +16,7 @@ const RecuerdoBarraLista = (props) => {
                         <a className="action-icon" onClick={() => props.handleEditClick(recuerdoItem)}>
                             <FontAwesomeIcon icon="edit" />
                         </a>
-                        <a className="action-icon" onClick={() => props.handleDeleteClick(recuerdoItem)}>
+                        <a className="action-icon-trash" onClick={() => props.handleDeleteClick(recuerdoItem)}>
                             <FontAwesomeIcon icon="trash" />
                         </a>
                     </div>

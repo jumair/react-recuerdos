@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import NumMeGusta from "../recuerdo/num-megusta";
 import NumQuienes from "../recuerdo/num-quienes";
+import NumHistorias from "../recuerdo/num-historias";
 
 import HistoriaModal from "../modals/historia-modal";
 
@@ -89,7 +90,7 @@ export default class RecuerdoItem extends Component {
                                 <FontAwesomeIcon icon="fa-solid fa-comment-dots" />
                             </div>
                             <div className='info-columna-dato'>
-                                x Historias
+                                <NumHistorias recuerdoId={id}/>
                             </div>
                         </div>
                     </div>
