@@ -45,6 +45,11 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 
 ### Fichero con el archivo de creación de la BD
 
+La base de datos se ha creado en MySQL usando **XAMPP**. _Enlace_ https://www.apachefriends.org/es/index.html.
+
+En phpmyadmin creamos la base de datos univerdidad e importamos el siguiente fichero y lo ejecutamos.
+
+
 
 
  
