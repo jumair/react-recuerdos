@@ -41,6 +41,10 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
        "urlapi": "http://127.0.0.1:3001/api/"
    }
 
+### Fichero con el código de las APIs
+
+### Fichero con el archivo de creación de la BD
+
 
 
  
