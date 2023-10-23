@@ -22,10 +22,15 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 
 ## Datos para poder probar la aplicación
 > El BackEnd se ha en Python con Flask y API REST y los datos se guardan en una BD MySql.
+
 > El FrontEnd se ha realizado en React, JavaScript, HTML5 y CSS3.
+
 > Las fotos se almacenan en Cloudinary que es una plataforma para almacenar fotos.
+
  Para usar Cloudinary hay que registrarse.
+ 
  En src/components/utils el fichero apis ejemplo.js debe ser renombrado a apis.js e introducir los siguientes datos :
+ 
   const datosapis = {
       "cloudinary": {
           "cloudName": "Name of cloud name in cloudinary",
