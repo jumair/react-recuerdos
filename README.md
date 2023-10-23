@@ -21,7 +21,7 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 6.- Un usuario sólo puede editar o borrar sus propias fotos, no las de los demás. O sea, al entrar en el menú **Recuerdo Manager** sólo aparecerán las fotos subidas por el usuario logeado en ese momento.
 
 ## Datos para poder probar la aplicación
-> El BackEnd se ha en Python con Flask y API REST y los datos se guardan en una BD MySql.
+> El BackEnd se ha hecho en Python con Flask y API REST y los datos se guardan en una BD MySql.
 
 > El FrontEnd se ha realizado en React, JavaScript, HTML5 y CSS3.
 
@@ -31,15 +31,15 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
  
  En src/components/utils el fichero apis ejemplo.js debe ser renombrado a apis.js e introducir los siguientes datos :
  
-  const datosapis = {
-      "cloudinary": {
-          "cloudName": "Name of cloud name in cloudinary",
-          "uploadPreset": "Folder in cloudinary of images",
-          "apiKey": "Apikey in cloudinary",
-          "apiSecret": "Api secret in cloudinary"
-      },
-      "urlapi": "http://127.0.0.1:3001/api/"
-  }
+   const datosapis = {
+       "cloudinary": {
+           "cloudName": "Name of cloud name in cloudinary",
+           "uploadPreset": "Folder in cloudinary of images",
+           "apiKey": "Apikey in cloudinary",
+           "apiSecret": "Api secret in cloudinary"
+       },
+       "urlapi": "http://127.0.0.1:3001/api/"
+   }
 
 
 
