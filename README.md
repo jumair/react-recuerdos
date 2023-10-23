@@ -5,7 +5,7 @@
 *Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
 
 # Proyecto final > RECUERDOS
-Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios registrados en las fotos, poder poner si una foto te gusta y poder añafir historias a una foto.
+Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios registrados en las fotos, poder poner si una foto te gusta y poder añadir historias a una foto.
 
 ## Notas
 1.- Los únicos que pueden ver y subir fotos son los usuarios registrados en la aplicación. Este registro se ha hecho de manera manual. La aplicación no contempla el registro de usuarios, sólo su autentificación.
