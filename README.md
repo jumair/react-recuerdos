@@ -9,10 +9,15 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 
 ## Notas
 1.- Los únicos que pueden ver y subir fotos son los usuarios registrados en la aplicación. Este registro se ha hecho de manera manual. La aplicación no contempla el registro de usuarios, sólo su autentificación.
+
 2.- Cada foto puede tener historias relacionadas creadas por cualquier usuario.
+
 3.- Todos los usuarios pueden ver todas las historias de una foto pero sólo pueden borrar las historias creadas por él.No se pueden borrar las historias de otros usuarios.
+
 4.- Cada foto puede tener etiquetadas a las personas que aparecen en la foto. Sólo se puede etiquetar a usuarios registrados.
+
 5.- Un usuario puede darle a **me gusta** en una foto. Un usuario puede darle a **me gusta** a una foto suya.
+
 6.- Un usuario sólo puede editar o borrar sus propias fotos, no las de los demás. O sea, al entrar en el menú **Recuerdo Manager** sólo aparecerán las fotos subidas por el usuario logeado en ese momento.
 
 ## Datos para poder probar la aplicación
