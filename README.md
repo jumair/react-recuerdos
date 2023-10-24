@@ -21,6 +21,8 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 6.- Un usuario sólo puede editar o borrar sus propias fotos, no las de los demás. O sea, al entrar en el menú **Recuerdo Manager** sólo aparecerán las fotos subidas por el usuario logeado en ese momento.
 
 ## Datos para poder probar la aplicación
+> En el directorio **ayuda** hay ficheros con la estructura de la Base de datos, con el código de las APIs, etc.
+
 > El BackEnd se ha hecho en Python con Flask y API REST y los datos se guardan en una BD MySql.
 
 > El FrontEnd se ha realizado en React, JavaScript, HTML5 y CSS3.
@@ -43,7 +45,7 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 
 ### Fichero con el código de las APIs
 
-El fichero con las APIs escrito en Python es el siguiente : 
+El fichero con las APIs escrito en Python es el siguiente : https://github.com/jumair/react-recuerdos/blob/main/ayuda/main.py
 
 ### Fichero con el archivo de creación de la BD
 
