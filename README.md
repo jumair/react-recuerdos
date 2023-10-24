@@ -32,7 +32,8 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
  Para usar Cloudinary hay que registrarse.
  
  En src/components/utils el fichero **apis ejemplo.js** debe ser renombrado a **apis.js** e introducir los siguientes datos :
- 
+
+ '''
    const datosapis = {
        "cloudinary": {
            "cloudName": "Name of cloud name in cloudinary",
@@ -42,6 +43,7 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
        },
        "urlapi": "http://127.0.0.1:3001/api/"
    }
+  '''
 
 ### Fichero con el código de las APIs
 
