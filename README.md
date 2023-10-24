@@ -51,5 +51,5 @@ El fichero con las APIs escrito en Python es el siguiente : https://github.com/j
 
 La base de datos se ha creado en MySQL usando **XAMPP**. _Enlace_ https://www.apachefriends.org/es/index.html.
 
-En phpmyadmin creamos la base de datos **pracdevcamp** e importamos el siguiente fichero y lo ejecutamos.
+En phpmyadmin creamos la base de datos **pracdevcamp** e importamos el siguiente fichero y lo ejecutamos. https://github.com/jumair/react-recuerdos/blob/main/ayuda/pracdevcamp.sql
 
