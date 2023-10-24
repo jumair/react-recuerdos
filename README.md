@@ -47,5 +47,14 @@ Aplicación para ver y subir fotos a la web, poder etiquetar a los usuarios regi
 
 La base de datos se ha creado en MySQL usando **XAMPP**. _Enlace_ https://www.apachefriends.org/es/index.html.
 
+<<<<<<< HEAD
 En phpmyadmin creamos la base de datos pracdevcamp e importamos el siguiente fichero y lo ejecutamos.
 
+=======
+En phpmyadmin creamos la base de datos **pracdevcamp** e importamos el siguiente fichero y lo ejecutamos.
+
+
+
+
+ 
+>>>>>>> 53dacca34a4a7bbdddf8966c4f92a7c2f31ea2b3
