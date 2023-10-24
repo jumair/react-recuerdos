@@ -67,6 +67,8 @@ Diagrama sencillo de login. https://github.com/jumair/react-recuerdos/blob/main/
 
 Diagrama de despliegue. https://github.com/jumair/react-recuerdos/blob/main/ayuda/Diagrama_Despliegue.pdf
 
+Diagrama de actividad de Nuevo Recuerdo. https://github.com/jumair/react-recuerdos/blob/main/ayuda/Diagrama_Actividad.pdf
+
 
 
 
