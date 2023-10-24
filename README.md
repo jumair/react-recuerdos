@@ -63,9 +63,11 @@ https://github.com/jumair/react-recuerdos/blob/main/ayuda/pracdevcamp.pdf
 
 ### Diagramas de la práctica
 
-Diagrama sencillo de login. 
+Diagrama sencillo de login. https://github.com/jumair/react-recuerdos/blob/main/ayuda/LogIn.pdf
 
-Diagrama de despliegue. 
+Diagrama de despliegue. https://github.com/jumair/react-recuerdos/blob/main/ayuda/Diagrama_Despliegue.pdf
+
+
 
 
 
