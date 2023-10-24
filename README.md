@@ -61,5 +61,12 @@ https://github.com/jumair/react-recuerdos/blob/main/ayuda/pracdevcamp.svg
 
 https://github.com/jumair/react-recuerdos/blob/main/ayuda/pracdevcamp.pdf
 
+### Diagramas de la práctica
+
+Diagrama sencillo de login. 
+
+Diagrama de despliegue. 
+
+
 
 
