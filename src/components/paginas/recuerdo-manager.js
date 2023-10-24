@@ -74,8 +74,7 @@ export default class RecuerdoManager extends Component {
                     timestamp: timestamp,
                 })
                 .then((response) => {
-                    this.borrarInformacionFoto(recuerdoItem);
-                    //console.log("Image deleted from cloudinary: ", response);      
+                    this.borrarInformacionFoto(recuerdoItem);     
                 })
                 .catch((error) => {
                     console.error("Unable to delete image: ", error)
@@ -92,8 +91,6 @@ export default class RecuerdoManager extends Component {
         axios
             .delete(
                 urlApi + recuerdoItem.id
-                //`http://127.0.0.1:3001/api/foto_borra/${recuerdoItem.id}`
-                //`https://jumairor.pythonanywhere.com/api/foto_borra/${recuerdoItem.id}`
             )
             .then(response => {
                 this.setState({
@@ -102,7 +99,6 @@ export default class RecuerdoManager extends Component {
                     })
                 });
 
-                // Como limpiar el form desde aqui??? Usando alguna variable de estado ???
                 window.location.reload(true);
 
                 alert("Borrar " + response.data);
@@ -139,12 +135,9 @@ export default class RecuerdoManager extends Component {
         axios
             .get(
                 urlApi + usuarioId
-                //`http://127.0.0.1:3001/api/fotos/usuario_id/${usuarioId}`
-                //`https://jumairor.pythonanywhere.com/api/fotos/usuario_id/${usuarioId}`
             )
             .then(response => {
                 this.setState({
-                    //recuerdoItems: response.data Funciona igual
                     recuerdoItems: [...response.data]
                 });
             })

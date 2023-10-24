@@ -25,8 +25,6 @@ export default class RecuerdoDetalle extends Component {
         axios
             .get(
                 urlApi + this.state.currentId
-                //`http://127.0.0.1:3001/api/foto/id/${this.state.currentId}`
-                //`https://jumairor.pythonanywhere.com/api/foto/id/${this.state.currentId}`
             )
             .then(response => {
                 this.setState({
@@ -44,8 +42,6 @@ export default class RecuerdoDetalle extends Component {
         axios
             .get(
                 urlApi + this.state.currentId
-                //`http://127.0.0.1:3001/api/megusta/${this.state.currentId}`
-                //`https://jumairor.pythonanywhere.com/api/megusta/${this.state.currentId}`
             )
             .then(response => {
                 this.setState({
@@ -63,8 +59,6 @@ export default class RecuerdoDetalle extends Component {
         axios
             .get(
                 urlApi + this.state.currentId
-                //`http://127.0.0.1:3001/api/quienes/${this.state.currentId}`
-                //`https://jumairor.pythonanywhere.com/api/quienes/${this.state.currentId}`
             )
             .then(response => {
                 this.setState({

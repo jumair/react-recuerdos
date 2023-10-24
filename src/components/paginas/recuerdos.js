@@ -25,15 +25,12 @@ export default class Recuerdos extends Component {
     }
 
     onScroll() {
-        //console.log("ONSCROLL - this.state.totalCount", this.state.totalCount);
-
         if (this.state.isLoading || this.state.recuerdoItems.length === this.state.totalCount) {
             return;
         }
 
         //El +1 es para que llegue al final. Hay que tener en cuenta el encabezado con el menú.
         if (Math.trunc(window.innerHeight + document.documentElement.scrollTop + 1) === document.documentElement.offsetHeight) {
-        //if (Math.trunc(window.innerHeight + document.documentElement.scrollTop + 1) === document.documentElement.offsetHeight) {
             this.getRecuerdoItems();
         }
     }
@@ -44,8 +41,6 @@ export default class Recuerdos extends Component {
         axios
         .post(
             urlApi,
-            //'http://127.0.0.1:3001/api/fotos',
-            //'https://jumairor.pythonanywhere.com/api/fotos',
         {
             fotos: {
                 limit: "4",
@@ -71,8 +66,6 @@ export default class Recuerdos extends Component {
         axios
             .get(
                 urlApi
-                //`http://127.0.0.1:3001/api/num_usuarios`
-                //`https://jumairor.pythonanywhere.com/api/num_usuarios`
             )
             .then(response => {
                 this.setState({
@@ -88,10 +81,6 @@ export default class Recuerdos extends Component {
         this.getNumUsuarios();
         this.getRecuerdoItems();
     }
-
-    /*componentDidUnmount() {  //  NO EXISTE ?????
-        window.removeEventListener("scroll", this.onScroll, false);
-    }*/
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.onScroll, false);

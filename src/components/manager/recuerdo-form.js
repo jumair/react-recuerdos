@@ -23,11 +23,7 @@ export default class RecuerdoForm extends Component {
             fecha_foto_subida: "",
             usuario_id: "",
             editMode: false,
-            
             apiUrl: datosapis.urlapi + "foto_nueva",
-            //apiUrl: "http://127.0.0.1:3001/api/foto_nueva",
-            //apiUrl: "https://jumairor.pythonanywhere.com/api/foto_nueva",
-
             apiAction: 'post',
             etiquetas: []
           };
@@ -42,17 +38,12 @@ export default class RecuerdoForm extends Component {
           this.subirInformacion = this.subirInformacion.bind(this);
 
           this.borraFotoDeCloudinary = this.borraFotoDeCloudinary.bind(this);
-          //this.publicIdDeCloudinary = this.publicIdDeCloudinary.bind(this);
 
           this.etiquetaChange = this.etiquetaChange.bind(this);
-          //this.pruebaEtiquetas = this.pruebaEtiquetas.bind(this);
           this.crearArrayEtiquetas = this.crearArrayEtiquetas.bind(this);
           this.verQuienes = this.verQuienes.bind(this);
 
           this.imageRef = React.createRef();
-
-          /* De momento */
-          //this.buildForm = this.buildForm.bind(this);
     }
 
     formateaFecha(fecha) {
@@ -91,15 +82,9 @@ export default class RecuerdoForm extends Component {
                 fecha_foto_subida: fecha_foto_subida || "",
                 usuario_id: usuario_id || "",
                 editMode: true,
-
                 apiUrl: datosapis.urlapi + "foto_modifica/" + id,
-                //apiUrl: `http://127.0.0.1:3001/api/foto_modifica/${id}`,
-                //apiUrl: `https://jumairor.pythonanywhere.com/api/foto_modifica/${id}`,
-
                 apiAction: 'put',
             });
-
-            // Poner url_foto del estado en la imagen de dropzone ???
 
             this.verQuienes(id);
 
@@ -156,7 +141,6 @@ export default class RecuerdoForm extends Component {
             
             axios
             .post("https://api.cloudinary.com/v1_1/" + datosapis.cloudinary.uploadPreset + "/image/upload", formData, {
-            //.post("https://api.cloudinary.com/v1_1/dwuug0hqs/image/upload", formData, {
                 headers: {"X-Requested-With": "XMLHttpRequest"},
             })
             .then((response) => {;
@@ -173,9 +157,6 @@ export default class RecuerdoForm extends Component {
     }
 
     subirInformacion() {
-        //const datos = this.buildForm();
-        //console.log("handleSubmit etiquetas = ", datos.get('etiquetas')); 
-
         axios
           ({
             method: this.state.apiAction,
@@ -183,9 +164,6 @@ export default class RecuerdoForm extends Component {
             data: this.buildForm()
           })
           .then(response => {
-            // Devuelve "Recuerdo guardado"
-            //console.log("handleSubmit en Form => ", response.data);
-
             if (this.state.editMode) {
                 this.props.handleEditFormSubmission();
             } else {
@@ -203,11 +181,7 @@ export default class RecuerdoForm extends Component {
                 fecha_foto_subida: "",
                 usuario_id: "",
                 editMode: false,
-
                 apiUrl: datosapis.urlapi + "foto_nueva",
-                //apiUrl: "http://127.0.0.1:3001/api/foto_nueva",
-                //apiUrl: "https://jumairor.pythonanywhere.com/api/foto_nueva",
-
                 apiAction: 'post'
             });
 
@@ -223,7 +197,6 @@ export default class RecuerdoForm extends Component {
 
           })
           .catch(error => {
-            // Aqui iria la llamada a this.props.handleFormSubmissionError(error); para tratarlo en el manager
             console.log("error in handleSubmit en Form", error);
           });
     }
@@ -235,20 +208,11 @@ export default class RecuerdoForm extends Component {
     }
 
     handleSubmit(event) {
-        //this.subirImagen();
-
         if (this.state.editMode) {
             this.subirInformacion();
         } else {
             this.subirImagen();
         }
-
-        //PROBANDO y luego OJO a como dejo en el estado la propiedad etiquetas
-        //this.pruebaEtiquetas();
-        //this.buildForm();
-
-        //Probando
-        //this.subirInformacion();
 
         event.preventDefault();
     }
@@ -302,20 +266,6 @@ export default class RecuerdoForm extends Component {
         handleDelete({publicId});
     }
 
-    /*publicIdDeCloudinary() {
-        //SE PODRA BORRAR
-
-        const url = "https://res.cloudinary.com/dwuug0hqs/image/upload/v1694538314/recuerdos/daba1o03fak6cmfypog1.jpg";
-
-        const arrayRes = url.split("/");
-        const carpeta = arrayRes[arrayRes.length - 2];
-        const nombreConExtension = arrayRes[arrayRes.length - 1];
-        const [nombre] = nombreConExtension.split(".");
-        const resultado = carpeta + "/" + nombre;
-
-        console.log("publicIdDeCloudinary => ", resultado);
-    }*/
-
     etiquetaChange(event) {
         const index = this.state.etiquetas.findIndex(usuario => usuario.nombre === event.target.innerHTML);
 
@@ -328,21 +278,12 @@ export default class RecuerdoForm extends Component {
         }
     }
 
-    /*pruebaEtiquetas() {
-        //SE PODRA BORRAR
-
-        //this.state.etiquetas.forEach(usuario => alert("pruebaEtiquetas => " + usuario.nombre + " etiquetado: " + usuario.etiquetado));
-        console.log("pruebaEtiquetas => ", this.state.etiquetas);
-    }*/
-
     crearArrayEtiquetas() {
         const urlApi = datosapis.urlapi + "usuarios";
 
         axios
             .get(
                 urlApi
-                //'http://127.0.0.1:3001/api/usuarios'
-                //'https://jumairor.pythonanywhere.com/api/usuarios'
             )
             .then(response => {
                 let resultado = [];
@@ -366,8 +307,6 @@ export default class RecuerdoForm extends Component {
         axios
             .get(
                 urlApi + id
-                //`http://127.0.0.1:3001/api/quienes/${id}`
-                //`https://jumairor.pythonanywhere.com/api/quienes/${id}`
             )
             .then(response => {
                 //Quita los etiquetados del array primero
@@ -408,129 +347,96 @@ export default class RecuerdoForm extends Component {
 
         return(
             <div>
-            <form onSubmit={this.handleSubmit} className="recuerdo-form-contenedor">
-                {/* Poner Recuerdo Editando o Nuevo ??? */}
-                <legend>Recuerdo</legend>
+                <form onSubmit={this.handleSubmit} className="recuerdo-form-contenedor">
+                    <legend>Recuerdo</legend>
 
-                <div className="two-column">
-                    <label>Id</label>
-                    <label>Titulo</label>
-                </div>
-
-                <div className="two-column">
-                    {/*<input
-                        type="text"
-                        name="id"
-                        placeholder="Recuerdo Id"
-                        value={this.state.id}
-                        disabled={true}
-                    />*/}
-
-                    <label>{this.state.id}</label>
-
-                    <input
-                        type="text"
-                        name="titulo"
-                        placeholder="* Titulo"
-                        autoFocus={true}
-                        value={this.state.titulo}
-                        onChange={this.handleChange}
-                        required
-                    />
-                </div>
-
-                <div className="one-column">
-                    <label>Descripcion</label>
-                </div>
-
-                <div className="one-column">
-                    <textarea
-                        type="text"
-                        name="descripcion"
-                        placeholder="* Descripción"
-                        value={this.state.descripcion}
-                        onChange={this.handleChange}
-                        required
-                    />
-                </div>
-
-                <div className="three-column">
-                    <label>Fecha de la Foto</label>
-                </div>
-
-                <div className="three-column">
-                    <input
-                        type="date"
-                        name="fecha_foto"
-                        placeholder="* Fecha de la Foto"
-                        value={this.state.fecha_foto}
-                        onChange={this.handleChange}
-                        required
-                    />
-                </div>
-
-                <div className="two-column">
-                    <div className="image-uploader">
-                        {this.state.url_foto && this.state.editMode ? (
-                            <div className="portfolio-manager-image-wrapper">
-                                {/*<img src={this.state.thumb_image_url} />*/}
-                                <img src={this.state.url_foto} />
-                            </div>
-                        ) : (
-                            <DropzoneComponent
-                                // OJO
-                                ref={this.imageRef}   
-
-                                config={this.componentConfig()}
-                                djsConfig={this.djsConfig()}
-                                eventHandlers={this.handleImageDrop()}
-                            >
-                                <div className="dz-message">Coloca tu imágen aquí O haz click para seleccionar</div>
-                            </DropzoneComponent>
-                        )}
+                    <div className="two-column">
+                        <label>Id</label>
+                        <label>Titulo</label>
                     </div>
 
-                    <div className="usuarios-etiquetas">
-                        <label>Usuarios Etiquetados</label>
-                        <hr></hr>
-                        <br></br>
+                    <div className="two-column">
+                        <label>{this.state.id}</label>
 
-                        <div className="three-column">
-                            {mostrarEtiquetados}
+                        <input
+                            type="text"
+                            name="titulo"
+                            placeholder="* Titulo"
+                            autoFocus={true}
+                            value={this.state.titulo}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="one-column">
+                        <label>Descripcion</label>
+                    </div>
+
+                    <div className="one-column">
+                        <textarea
+                            type="text"
+                            name="descripcion"
+                            placeholder="* Descripción"
+                            value={this.state.descripcion}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="three-column">
+                        <label>Fecha de la Foto</label>
+                    </div>
+
+                    <div className="three-column">
+                        <input
+                            type="date"
+                            name="fecha_foto"
+                            placeholder="* Fecha de la Foto"
+                            value={this.state.fecha_foto}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="two-column">
+                        <div className="image-uploader">
+                            {this.state.url_foto && this.state.editMode ? (
+                                <div className="portfolio-manager-image-wrapper">
+                                    <img src={this.state.url_foto} />
+                                </div>
+                            ) : (
+                                <DropzoneComponent
+                                    ref={this.imageRef}   
+
+                                    config={this.componentConfig()}
+                                    djsConfig={this.djsConfig()}
+                                    eventHandlers={this.handleImageDrop()}
+                                >
+                                    <div className="dz-message">Coloca tu imágen aquí O haz click para seleccionar</div>
+                                </DropzoneComponent>
+                            )}
                         </div>
 
+                        <div className="usuarios-etiquetas">
+                            <label>Usuarios Etiquetados</label>
+                            <hr></hr>
+                            <br></br>
+
+                            <div className="three-column">
+                                {mostrarEtiquetados}
+                            </div>
+                        </div>   
                     </div>
+
+                    <br></br>
+                    <br></br>
                     
-                </div>
-
-                <br></br>
-                <br></br>
+                    <div>
+                        <button className="btn" type="submit">Guardar</button>
+                    </div>
+                </form>
                 
-                <div>
-                    <button className="btn" type="submit">Guardar</button>
-                </div>
-            </form>
-
-
-                <div>
-                    {/*<button className="btn" onClick={this.subirImagen}>Subir Imagen</button>*/}
-                    {/*<button className="btn" onClick={this.crearArrayEtiquetas}>Prueba Etiquetas</button>*/}
-                </div>
-
-                <br></br>
-                {/*<div>
-                    <button className="btn" 
-                        onClick={() => this.borraFotoDeCloudinary("https://res.cloudinary.com/dwuug0hqs/image/upload/v1694785891/recuerdos/ck3xpnxlct23ebatsybs.jpg")}>
-                        Borrar Imagen
-                    </button>
-                        </div>*/}
-
-                <br></br>
-                <div>
-                    {/*<button className="btn" onClick={this.publicIdDeCloudinary}>Consigue Public Id</button>*/}
-                    {/*<button className="btn" onClick={this.verQuienes}>Ver Quienes</button>*/}
-                </div>
-
             </div>
         );
     }

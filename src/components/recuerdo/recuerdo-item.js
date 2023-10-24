@@ -24,6 +24,9 @@ export default class RecuerdoItem extends Component {
         this.setState({
             historiaModalIsOpen: false
         });
+
+        //Refrescar la página
+        window.location.reload();
     }
 
     handleNuevaHitoriaClick() {

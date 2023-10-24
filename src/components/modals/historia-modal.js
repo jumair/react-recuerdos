@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import axios from "axios";
 import ReactModal from 'react-modal';
 
 
 import HistoriaForm from './historia-form';
 
-import datosapis from '../utils/apis';
+//import datosapis from '../utils/apis';
 import storage from '../utils/storage';
 
 ReactModal.setAppElement(".app-wrapper");
@@ -19,9 +19,7 @@ export default class HistoriaModal extends Component {
     }
 
     handleSuccessfullFormSubmission(historia) {
-        //console.log("historia desde historia-form", historia);
         alert(historia);
-        //this.props.handleModalClose();
     }
 
     render() {

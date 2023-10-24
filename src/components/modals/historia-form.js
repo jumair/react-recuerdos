@@ -11,7 +11,6 @@ export default class HistoriaForm extends Component {
 
         this.state = {
             historia: "",
-            //historia_status: "",
             historias: []
         }
 
@@ -81,7 +80,6 @@ export default class HistoriaForm extends Component {
         axios
         .get(urlApi)
         .then(response => {
-            //console.log("Datos => ", response);
             this.setState({
                 historias: response.data
             });
@@ -97,11 +95,6 @@ export default class HistoriaForm extends Component {
         axios
         .delete(urlApi)
         .then(response => {
-            //console.log("Datos => ", response);
-            /*this.setState({
-                historias: response.data
-            });*/
-            //Puedo hacer un filter en el array con historiaID ????
             alert("Historia Borrada");
             this.getHistoriasDeFoto();
         })
@@ -120,12 +113,10 @@ export default class HistoriaForm extends Component {
                 <div key={historia.id} className="historia-contenedor">
                     <div className="historia">{historia.historia}</div>
                     <div className="fecha-historia">
-                        {/*{historia.fecha_historia}*/}
                         {new Date(historia.fecha_historia).toLocaleDateString('sp-es', {weekday:"long", year:"numeric", month:"short", day:"numeric"})}
                     </div>
                     <div className="usuario">{historia.usuario_nombre}</div>
                     <div className="borrar">
-                        {/*{historia.usuario_id === storage.get('Id') ? "Se puede Borrar" : "No se puede Borrar"}*/}
                         {historia.usuario_id === storage.get('Id') ? 
                             (<a onClick={() => this.borraHistoria(historia.id)}>
                                 <FontAwesomeIcon icon="trash" />

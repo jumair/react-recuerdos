@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
-import storage from '../utils/storage';
 import datosapis from '../utils/apis';
 
 export default class MasVistos extends Component {
@@ -33,8 +32,6 @@ export default class MasVistos extends Component {
         axios
             .get(
                 urlApi,
-                //'http://127.0.0.1:3001/api/fotos_mas_populares'
-                //'https://jumairor.pythonanywhere.com/api/fotos_mas_populares'
             )
             .then(response => {
                 this.setState({

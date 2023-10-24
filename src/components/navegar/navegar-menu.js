@@ -12,14 +12,6 @@ class NavegarMenu extends Component {
         this.salir = this.salir.bind(this);
     }
 
-    dynamicLink (route, linkText) {
-        return (
-            <div className="menu">
-                <NavLink to={route} activeClassName="nav-link-active">{linkText}</NavLink>
-            </div>
-        );
-    }
-
     salir() {
         this.props.handleSuccessfulLogout();
         // Volvemos a la pagina de home.
@@ -43,7 +35,7 @@ class NavegarMenu extends Component {
 
                     <div className="menu">
                         {this.props.loggedInStatus === "LOGGED_IN" ? (
-                                <NavLink exact to="/mas_vistos" activeClassName="nav-link-active">Mas Vistos</NavLink>
+                                <NavLink exact to="/mas_vistos" activeClassName="nav-link-active">Mas Recientes</NavLink>
                             ) : null
                         }
                     </div>

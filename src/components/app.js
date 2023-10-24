@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSignOutAlt, faSpinner, faThumbsUp, faUser, faCommentDots, faTrash, faEdit, faHeart, faHeartCrack } from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt, faSpinner, faThumbsUp, faUser, faCommentDots, faTrash, faEdit, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegHeart } from "@fortawesome/free-regular-svg-icons";
 
 import NavegarMenu from './navegar/navegar-menu';
@@ -16,7 +16,7 @@ import NoMatch from './paginas/no-match';
 
 import storage from './utils/storage';
 
-library.add(faSignOutAlt, faSpinner, faThumbsUp, faUser, faCommentDots, faTrash, faEdit, faHeart, faHeartCrack, faRegHeart);
+library.add(faSignOutAlt, faSpinner, faThumbsUp, faUser, faCommentDots, faTrash, faEdit, faHeart, faRegHeart);
 
 export default class App extends Component {
   constructor(props) {

@@ -23,8 +23,6 @@ export default class NumMeGusta extends Component {
         axios
             .get(
                 urlApi + this.props.recuerdoId
-                //`http://127.0.0.1:3001/api/num_megusta/${this.props.recuerdoId}`
-                //`https://jumairor.pythonanywhere.com/api/num_megusta/${this.props.recuerdoId}`
             )
             .then(response => {
                 this.setState({
@@ -42,8 +40,6 @@ export default class NumMeGusta extends Component {
         axios
             .get(
                 urlApi + this.props.recuerdoId + "/" + storage.get('Id')
-                //`http://127.0.0.1:3001/api/legusta/${this.props.recuerdoId}/${storage.get('Id')}`
-                //`https://jumairor.pythonanywhere.com/api/legusta/${this.props.recuerdoId}/${storage.get('Id')}`
             )
             .then(response => {
                 this.setState({
@@ -66,8 +62,6 @@ export default class NumMeGusta extends Component {
         axios
             .post(
                 urlApi, formData
-                //'http://127.0.0.1:3001/api/pon_quita_megusta', formData
-                //'https://jumairor.pythonanywhere.com/api/pon_quita_megusta', formData
             )
             .then(response => {
                 this.setState({
@@ -118,11 +112,6 @@ export default class NumMeGusta extends Component {
                             </div>
                             )
                     }
-                    
-                    {/*<FontAwesomeIcon icon="fa-solid fa-heart" />
-                    <FontAwesomeIcon icon="fa-solid fa-heart-crack" />
-                    <FontAwesomeIcon icon="fa-regular fa-heart" />*/}
-
                 </div>
             </div>
         );

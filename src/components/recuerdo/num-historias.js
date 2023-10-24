@@ -18,8 +18,6 @@ export default class NumHistorias extends Component {
         axios
             .get(
                 urlApi + this.props.recuerdoId
-                //`http://127.0.0.1:3001/api/num_quienes/${this.props.recuerdoId}`
-                //`https://jumairor.pythonanywhere.com/api/num_quienes/${this.props.recuerdoId}`
             )
             .then(response => {
                 this.setState({

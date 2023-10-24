@@ -29,71 +29,32 @@ export default class Login extends Component {
     }
 
     handleSubmit(event) {
-        //const urlApi = storage.get('RutaApi') + "auth";
         const urlApi = datosapis.urlapi + "auth";
 
         axios
           .post(urlApi,  
-          //.post('https://127.0.0.1:3001/api/auth',
-          //.post('https://jumairor.pythonanywhere.com/api/auth',
           {
             user: {
-                //nombre: "Juanma",
-                //password: "202cb962ac59075b964b07152d234b70", "123"
                 nombre: this.state.usuario,
                 password: md5(this.state.password)
             }
             
           })
           .then(response => {
-            //console.log("Datos en handleSubmit", response.data);
-            //console.log("Datos en handleSubmit", response.data[0].auth);
-            //console.log("Datos en handleSubmit", response.data[0].email);
-
-            // HAY QUE CAMBIAR ESTO EN PYTHON COMO RESPONDE
-            //console.log("Datos en handleSubmit PASA POR AQUI", response.data.length);
-
             if (response.data.length === 0) {
                 this.setState({
                     errorText: "¡¡¡ Usuario o Password Incorrectos !!!"
                 });
                 this.props.handleUnsuccessfulLogin();
             } else if (response.data[0].auth === 'OK') {
-                //storage.clear();
                 storage.set('Id', response.data[0].id);
                 storage.set('Nombre', response.data[0].nombre);
-
-                //const valor = storage.get('Nombre');
-                //console.log('handleSubmit', valor);
-
-                //Para ver si el navegador es compatible ???
-                //if (typeof(Storage) !== 'undefined') {
-                    // Código cuando Storage es compatible 
-                //} else {
-                   // Código cuando Storage NO es compatible
-                //}
 
                 this.props.history.push('/');
                 this.props.handleSuccessfulLogin();
             }
-
-            // HAY QUE CAMBIAR ESTO
-            
-            //if (response.data[0].auth === 'OK') {
-                //this.props.handleSuccessfulAuth();
-            //} else {
-                //this.setState({
-                    //errorText: "¡¡¡ Usuario o Password Incorrectos !!!"
-                //});
-                //this.props.handleUnsuccessfulAuth();
-            //}
-
-            /*this.setState({
-                usuariObj: [...response.data]
-            });*/
           })
           .catch(error => {
-            //console.log("error in handleSubmit", error);
             this.setState({
                 errorText: "¡¡¡ Se produjo un error !!!"
             });
@@ -105,8 +66,6 @@ export default class Login extends Component {
 
     render() {
         storage.clear();
-        //storage.set('RutaApi', 'http://127.0.0.1:3001/api/');
-        //storage.set('RutaApi', 'https://jumairor.pythonanywhere.com/api/');
 
         return (
             <div className="login">
