@@ -26,7 +26,7 @@ export default class RecuerdoItem extends Component {
         });
 
         //Refrescar la página
-        window.location.reload();
+        //window.location.reload();
     }
 
     handleNuevaHitoriaClick() {
